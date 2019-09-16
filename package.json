@@ -8,6 +8,7 @@
   },
   "author": "",
   "license": "ISC",
+  "private": false,
   "dependencies": {
     "ssb-about": "^2.0.1",
     "ssb-backlinks": "^0.7.3",
