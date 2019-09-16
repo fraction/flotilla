@@ -10,6 +10,7 @@
   "license": "ISC",
   "private": false,
   "dependencies": {
+    "secret-stack": "^6.3.0",
     "ssb-about": "^2.0.1",
     "ssb-backlinks": "^0.7.3",
     "ssb-blobs": "^1.2.2",
