@@ -6,19 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Christian Bundy <christianbundy@fraction.io>",
+  "license": "AGPL-3.0",
   "private": false,
   "dependencies": {
+    "muxrpcli": "^3.1.2",
     "secret-stack": "^6.3.0",
     "ssb-about": "^2.0.1",
     "ssb-backlinks": "^0.7.3",
     "ssb-blobs": "^1.2.2",
+    "ssb-conn": "^0.11.0",
     "ssb-db": "^19.3.0",
     "ssb-ebt": "^5.6.7",
     "ssb-friends": "^4.1.4",
-    "ssb-gossip": "^1.1.0",
+    "ssb-gossip": "^1.1.1",
     "ssb-invite": "^2.1.3",
+    "ssb-lan": "^0.1.3",
     "ssb-links": "^3.0.8",
     "ssb-local": "^1.0.0",
     "ssb-logging": "^1.0.0",
@@ -29,6 +32,7 @@
     "ssb-plugins": "^1.0.2",
     "ssb-query": "^2.4.3",
     "ssb-replicate": "^1.3.0",
+    "ssb-tangle": "^1.0.1",
     "ssb-unix-socket": "^1.0.0",
     "ssb-ws": "^6.2.3"
   }

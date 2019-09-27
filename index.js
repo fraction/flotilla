@@ -1,4 +1,4 @@
-module.exports = (config = {}) => 
+module.exports = (config = {}) =>
   require('secret-stack')(config)
     .use(require('ssb-db'))
     .use(require('ssb-replicate'))
@@ -19,5 +19,6 @@ module.exports = (config = {}) =>
     .use(require('ssb-ooo'))
     .use(require('ssb-plugins'))
     .use(require('ssb-query'))
+    .use(require('ssb-tangle'))
     .use(require('ssb-unix-socket'))
     .use(require('ssb-ws'))
