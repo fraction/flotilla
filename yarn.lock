@@ -1118,10 +1118,10 @@ has-ansi@^2.0.0:
   dependencies:
     ansi-regex "^2.0.0"
 
-has-network@0.0.1:
+has-network2@0.0.1:
   version "0.0.1"
-  resolved "https://registry.yarnpkg.com/has-network/-/has-network-0.0.1.tgz#3eea7b44caa9601797124be8ba89d228c4101499"
-  integrity sha1-Pup7RMqpYBeXEkvouonSKMQQFJk=
+  resolved "https://registry.yarnpkg.com/has-network2/-/has-network2-0.0.1.tgz#09dc743094537313dd099748390c16d603d5eccc"
+  integrity sha512-cpqaHIBwSKOhHzpWPXS2FnOzN6ekF238MxonA1CWZNx7UivVlq3GF+GqS6gXbvDwMYoaxXM+8el7tP8uFSrjsQ==
 
 has-symbols@^1.0.0:
   version "1.0.0"
@@ -1985,13 +1985,6 @@ multiserver@^3.0.2, multiserver@^3.1.0, multiserver@^3.1.2, multiserver@^3.3.3, 
     socks "^2.2.3"
     stream-to-pull-stream "^1.7.2"
 
-muxrpc-usage@^2.0.1:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/muxrpc-usage/-/muxrpc-usage-2.1.0.tgz#3a34a5f23d67a145374692dc7b9bf8f56dda78a5"
-  integrity sha512-ZspYQd4n4pLy86Gu/yrEdHvg5NBrg4p2NayQ2NFelN1QyLZRLTKPlTyaa6DyztsCG7mjLzxFBw9jw9LReB8Azw==
-  dependencies:
-    right-pad "^1.0.1"
-
 muxrpc-validation@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/muxrpc-validation/-/muxrpc-validation-3.0.2.tgz#4455b5be11917a1e6a54a413c6e40b33cac0d141"
@@ -2010,18 +2003,6 @@ muxrpc@^6.4.0, muxrpc@^6.4.2:
     packet-stream-codec "^1.1.1"
     pull-goodbye "0.0.2"
     pull-stream "^3.2.3"
-
-muxrpcli@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/muxrpcli/-/muxrpcli-3.1.2.tgz#3ac297d157bdf2ef04195a4bedfbb4810a93079d"
-  integrity sha512-3nDL3dYXKxAN+spKSQBolxFoOl4HJCcm5UKlxjdjQxcjvLGLFLvwuNf1vCRpSveCHiFCxPLltWq2hT+vlDLPtQ==
-  dependencies:
-    cont "^1.0.3"
-    minimist "^1.2.0"
-    muxrpc-usage "^2.0.1"
-    pull-stream "^3.6.9"
-    stream-to-pull-stream "^1.7.3"
-    word-wrap "^1.2.3"
 
 mv@^2.1.1:
   version "2.1.1"
@@ -2242,10 +2223,10 @@ obv@0.0.1, obv@^0.0.1:
   resolved "https://registry.yarnpkg.com/obv/-/obv-0.0.1.tgz#cb236106341536f0dac4815e06708221cad7fb5e"
   integrity sha1-yyNhBjQVNvDaxIFeBnCCIcrX+14=
 
-on-change-network@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/on-change-network/-/on-change-network-0.0.2.tgz#d977249477f91726949d80e82346dab6ef45216b"
-  integrity sha1-2XcklHf5FyaUnYDoI0batu9FIWs=
+on-change-network-strict@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/on-change-network-strict/-/on-change-network-strict-1.0.0.tgz#0d3c5ca7f03944ad07198e096db83693208e9ee0"
+  integrity sha512-ldHCpTJWgr5KUJy3/TVoSGNwBUA8BP9UFmd0iQqe4aGaXY4PJyzQPiVBIo8VBSlSoKyaJY3vcpW0hixZb6gPaA==
 
 on-wakeup@^1.0.1:
   version "1.0.1"
@@ -2901,11 +2882,6 @@ ret@~0.1.10:
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
   integrity sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==
 
-right-pad@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/right-pad/-/right-pad-1.0.1.tgz#8ca08c2cbb5b55e74dafa96bf7fd1a27d568c8d0"
-  integrity sha1-jKCMLLtbVedNr6lr9/0aJ9VoyNA=
-
 rimraf@^2.2.8, rimraf@^2.6.1, rimraf@^2.6.2:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.7.1.tgz#35797f13a7fdadc566142c29d4f07ccad483e3ec"
@@ -3281,15 +3257,15 @@ ssb-conn-staging@~0.1.0:
     pull-notify "~0.1.1"
     pull-stream "^3.6.9"
 
-ssb-conn@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/ssb-conn/-/ssb-conn-0.11.0.tgz#08f32824a1fe4b894667912b06c302919b96b600"
-  integrity sha512-faqkJNnbhLoauX9ijQmjpOwFoQQyUwFsCoKP0S1rAbNkcmoPNpdg99tBjmrD5uzh2tzaRzVSCISsD8E2YzPsqA==
+ssb-conn@^0.11.2:
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/ssb-conn/-/ssb-conn-0.11.2.tgz#99aa302cab5d91993d99589b2450bebca62822c4"
+  integrity sha512-jekmlO3nXYFIMpIe6N5n3NFRD484IaA9vROFFIuHZVcWdd13o1x577b+qNoWcigg2OjjGVN9ySFRlqVCO0zMMg==
   dependencies:
     debug "~4.1.1"
-    has-network "0.0.1"
+    has-network2 "0.0.1"
     ip "^1.1.5"
-    on-change-network "0.0.2"
+    on-change-network-strict "1.0.0"
     on-wakeup "^1.0.1"
     pull-notify "^0.1.1"
     pull-pause "~0.0.2"
@@ -3357,24 +3333,6 @@ ssb-friends@^4.1.4:
     pull-notify "^0.1.1"
     pull-stream "^3.6.0"
     ssb-ref "^2.7.1"
-
-ssb-gossip@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/ssb-gossip/-/ssb-gossip-1.1.1.tgz#2e76f6bf9705ed03d30665b5290b0bbecc65d005"
-  integrity sha512-lbizlDBCtOOnbnz7zS81NOtnAyHnXu9E3gxrAJHZe7oyxINRI7IpQ8J79to9aXzkb8+2M32R8K4whmsAHGvJAg==
-  dependencies:
-    atomic-file "^1.1.5"
-    deep-equal "^1.0.1"
-    has-network "0.0.1"
-    ip "^1.1.5"
-    muxrpc-validation "^3.0.0"
-    on-change-network "0.0.2"
-    on-wakeup "^1.0.1"
-    pull-notify "^0.1.1"
-    pull-ping "^2.0.2"
-    pull-stream "^3.6.9"
-    ssb-ref "^2.13.9"
-    statistics "^3.3.0"
 
 ssb-invite@^2.1.3:
   version "2.1.3"
@@ -3611,7 +3569,7 @@ statistics@^3.3.0:
   resolved "https://registry.yarnpkg.com/statistics/-/statistics-3.3.0.tgz#ec7b4750ff03ab24a64dd9b357a78316bead78aa"
   integrity sha1-7HtHUP8DqySmTdmzV6eDFr6teKo=
 
-stream-to-pull-stream@^1.6.1, stream-to-pull-stream@^1.7.0, stream-to-pull-stream@^1.7.1, stream-to-pull-stream@^1.7.2, stream-to-pull-stream@^1.7.3:
+stream-to-pull-stream@^1.6.1, stream-to-pull-stream@^1.7.0, stream-to-pull-stream@^1.7.1, stream-to-pull-stream@^1.7.2:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/stream-to-pull-stream/-/stream-to-pull-stream-1.7.3.tgz#4161aa2d2eb9964de60bfa1af7feaf917e874ece"
   integrity sha512-6sNyqJpr5dIOQdgNy/xcDWwDuzAsAwVzhzrWlAPAQ7Lkjx/rv0wgvxEyKwTq6FmNd5rjTrELt/CLmaSw7crMGg==
@@ -4022,7 +3980,7 @@ wide-align@^1.1.0:
   dependencies:
     string-width "^1.0.2 || 2"
 
-word-wrap@^1.1.0, word-wrap@^1.2.3:
+word-wrap@^1.1.0:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
   integrity sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==
