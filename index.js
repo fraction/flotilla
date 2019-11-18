@@ -5,7 +5,7 @@ const debug = require('debug')('flotilla')
 const plugins = [
   require('ssb-db'),
   require('ssb-replicate'),
-  [
+  shuffle([
     require('ssb-about'),
     require('ssb-backlinks'),
     require('ssb-blobs'),
@@ -25,26 +25,23 @@ const plugins = [
     require('ssb-tangle'),
     require('ssb-unix-socket'),
     require('ssb-ws')
-  ]
+  ])
 ]
 
 module.exports = (config = {}) => {
   const server = stack(config)
 
   // TODO: Move this out of the main function.
-  // NOTE: This will probably break if you add nested arrays. 
-  //       Implementing this recursively might have been very silly.
   const walk = (input) => {
     if (Array.isArray(input)) {
-      shuffle(input).forEach(walk)
+      input.forEach(walk)
     } else {
-      debug(input.name)
+      debug(input.name || '???')
       server.use(input)
     }
   }
 
-  // Don't shuffle original array.
-  plugins.forEach(walk)
+  walk(plugins)
 
   return server
 }
