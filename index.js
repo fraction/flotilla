@@ -1,5 +1,6 @@
 const stack = require('secret-stack')
 const shuffle = require('lodash.shuffle')
+const debug = require('debug')('flotilla')
 
 const plugins = [
   require('ssb-db'),
@@ -30,15 +31,17 @@ const plugins = [
 module.exports = (config = {}) => {
   const server = stack(config)
 
-  plugins.forEach((item) => {
-    if (Array.isArray(item)) {
-      shuffle(item).forEach((subItem) => {
-        server.use(subItem)
-      })
+  // TODO: Move this out of the main function.
+  const walk = (input) => {
+    if (Array.isArray(input)) {
+      shuffle(input).forEach(walk)
     } else {
-      server.use(item)
+      debug(input.name)
+      server.use(input)
     }
-  })
+  }
+
+  walk(plugins)
 
   return server
 }
