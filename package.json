@@ -10,6 +10,7 @@
   "license": "AGPL-3.0",
   "private": false,
   "dependencies": {
+    "lodash.shuffle": "^4.2.0",
     "secret-stack": "^6.3.0",
     "ssb-about": "^2.0.1",
     "ssb-backlinks": "^0.7.3",

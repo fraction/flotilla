@@ -1,24 +1,44 @@
-module.exports = (config = {}) =>
-  require('secret-stack')(config)
-    .use(require('ssb-db'))
-    .use(require('ssb-replicate'))
+const stack = require('secret-stack')
+const shuffle = require('lodash.shuffle')
 
-    .use(require('ssb-about'))
-    .use(require('ssb-backlinks'))
-    .use(require('ssb-blobs'))
-    .use(require('ssb-conn'))
-    .use(require('ssb-ebt'))
-    .use(require('ssb-friends'))
-    .use(require('ssb-invite'))
-    .use(require('ssb-lan'))
-    .use(require('ssb-links'))
-    .use(require('ssb-logging'))
-    .use(require('ssb-master'))
-    .use(require('ssb-no-auth'))
-    .use(require('ssb-onion'))
-    .use(require('ssb-ooo'))
-    .use(require('ssb-plugins'))
-    .use(require('ssb-query'))
-    .use(require('ssb-tangle'))
-    .use(require('ssb-unix-socket'))
-    .use(require('ssb-ws'))
+const plugins = [
+  require('ssb-db'),
+  require('ssb-replicate'),
+  [
+    require('ssb-about'),
+    require('ssb-backlinks'),
+    require('ssb-blobs'),
+    require('ssb-conn'),
+    require('ssb-ebt'),
+    require('ssb-friends'),
+    require('ssb-invite'),
+    require('ssb-lan'),
+    require('ssb-links'),
+    require('ssb-logging'),
+    require('ssb-master'),
+    require('ssb-no-auth'),
+    require('ssb-onion'),
+    require('ssb-ooo'),
+    require('ssb-plugins'),
+    require('ssb-query'),
+    require('ssb-tangle'),
+    require('ssb-unix-socket'),
+    require('ssb-ws')
+  ]
+]
+
+module.exports = (config = {}) => {
+  const server = stack(config)
+
+  plugins.forEach((item) => {
+    if (Array.isArray(item)) {
+      shuffle(item).forEach((subItem) => {
+        server.use(subItem)
+      })
+    } else {
+      server.use(item)
+    }
+  })
+
+  return server
+}
