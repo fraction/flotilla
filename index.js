@@ -32,6 +32,8 @@ module.exports = (config = {}) => {
   const server = stack(config)
 
   // TODO: Move this out of the main function.
+  // NOTE: This will probably break if you add nested arrays. 
+  //       Implementing this recursively might have been very silly.
   const walk = (input) => {
     if (Array.isArray(input)) {
       shuffle(input).forEach(walk)
@@ -41,7 +43,8 @@ module.exports = (config = {}) => {
     }
   }
 
-  walk(plugins)
+  // Don't shuffle original array.
+  plugins.forEach(walk)
 
   return server
 }
