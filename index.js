@@ -3,6 +3,7 @@ const shuffle = require('lodash.shuffle')
 const debug = require('debug')('flotilla')
 
 const plugins = [
+  require('ssb-master'),
   require('ssb-db'),
   require('ssb-replicate'),
   shuffle([
@@ -16,7 +17,6 @@ const plugins = [
     require('ssb-lan'),
     require('ssb-links'),
     require('ssb-logging'),
-    require('ssb-master'),
     require('ssb-no-auth'),
     require('ssb-onion'),
     require('ssb-ooo'),
