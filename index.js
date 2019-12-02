@@ -3,8 +3,11 @@ const shuffle = require('lodash.shuffle')
 const debug = require('debug')('flotilla')
 
 const plugins = [
+  // Authentication often hooked for authentication.
   require('ssb-master'),
+  // Methods often used during init().
   require('ssb-db'),
+  // Method `replicate()` often hooked for improvements.
   require('ssb-replicate'),
   shuffle([
     require('ssb-about'),
