@@ -9,11 +9,13 @@ const plugins = [
   require('ssb-db'),
   // Method `replicate()` often hooked for improvements.
   require('ssb-replicate'),
+  // Required by ssb-about, ssb-tangle, etc.
+  require('ssb-backlinks'),
+  // Required by ssb-room
+  require('ssb-conn'),
   shuffle([
     require('ssb-about'),
-    require('ssb-backlinks'),
     require('ssb-blobs'),
-    require('ssb-conn'),
     require('ssb-ebt'),
     require('ssb-friends'),
     require('ssb-invite'),
@@ -25,6 +27,8 @@ const plugins = [
     require('ssb-ooo'),
     require('ssb-plugins'),
     require('ssb-query'),
+    require('ssb-room/tunnel/client'),
+    require('ssb-search'),
     require('ssb-tangle'),
     require('ssb-unix-socket'),
     require('ssb-ws')
