@@ -15,7 +15,7 @@
     "ssb-about": "^2.0.1",
     "ssb-backlinks": "^0.7.3",
     "ssb-blobs": "^1.2.2",
-    "ssb-conn": "^0.15.1",
+    "ssb-conn": "^0.15.2",
     "ssb-db": "^19.3.0",
     "ssb-ebt": "^5.6.7",
     "ssb-friends": "^4.1.4",
