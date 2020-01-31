@@ -20,7 +20,6 @@ const plugins = [
     require('ssb-friends'),
     require('ssb-invite'),
     require('ssb-lan'),
-    require('ssb-links'),
     require('ssb-logging'),
     require('ssb-no-auth'),
     require('ssb-onion'),
