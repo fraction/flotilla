@@ -1,6 +1,6 @@
 {
   "name": "@fraction/flotilla",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "description": "distribution of secure scuttlebutt",
   "main": "index.js",
   "scripts": {
