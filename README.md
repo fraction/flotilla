@@ -28,7 +28,7 @@ First, you'll need Node.js and npm on your computer. Run `node --version` to see
 Then, install Flotilla:
 
 ```shell
-npm -g install @fraction/flotilla
+npm install @fraction/flotilla
 ```
 
 ## Resources
