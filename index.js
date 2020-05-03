@@ -30,7 +30,8 @@ const plugins = [
     require('ssb-search'),
     require('ssb-tangle'),
     require('ssb-unix-socket'),
-    require('ssb-ws')
+    require('ssb-ws'),
+    require('ssb-meme')
   ])
 ]
 
