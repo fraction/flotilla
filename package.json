@@ -1,20 +1,23 @@
 {
   "name": "@fraction/flotilla",
-  "version": "4.0.1",
+  "version": "5.0.1",
   "description": "distribution of secure scuttlebutt",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "common-good && node test",
+    "fix": "common-good fix"
   },
   "author": "Christian Bundy <christianbundy@fraction.io>",
   "license": "AGPL-3.0",
   "private": false,
   "dependencies": {
+    "debug": "^4.1.1",
     "lodash.shuffle": "^4.2.0",
     "secret-stack": "^6.3.0",
     "ssb-about": "^2.0.1",
     "ssb-backlinks": "^1.0.0",
     "ssb-blobs": "^1.2.2",
+    "ssb-config": "^3.4.4",
     "ssb-conn": "^0.16.0",
     "ssb-db": "^19.4.0",
     "ssb-ebt": "^5.6.7",
@@ -35,5 +38,17 @@
     "ssb-tangle": "^1.0.1",
     "ssb-unix-socket": "^1.0.0",
     "ssb-ws": "^6.2.3"
-  }
+  },
+  "devDependencies": {
+    "common-good": "^1.1.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fraction/flotilla.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/fraction/flotilla/issues"
+  },
+  "homepage": "https://github.com/fraction/flotilla#readme"
 }
