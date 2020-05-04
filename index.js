@@ -31,15 +31,15 @@ const plugins = [
     require("ssb-search"),
     require("ssb-tangle"),
     require("ssb-unix-socket"),
-    require("ssb-ws")
-  ])
+    require("ssb-ws"),
+  ]),
 ];
 
-module.exports = config => {
+module.exports = (config) => {
   const server = stack();
 
   // TODO: Move this out of the main function.
-  const walk = input => {
+  const walk = (input) => {
     if (Array.isArray(input)) {
       input.forEach(walk);
     } else {
