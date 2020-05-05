@@ -32,6 +32,7 @@ const plugins = [
     require("ssb-tangle"),
     require("ssb-unix-socket"),
     require("ssb-ws"),
+    require("ssb-meme"),
   ]),
 ];
 
