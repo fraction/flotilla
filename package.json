@@ -4,7 +4,7 @@
   "description": "distribution of secure scuttlebutt",
   "main": "index.js",
   "scripts": {
-    "test": "common-good && node test",
+    "test": "common-good test && node test",
     "fix": "common-good fix"
   },
   "author": "Christian Bundy <christianbundy@fraction.io>",
@@ -17,8 +17,8 @@
     "ssb-about": "^2.0.1",
     "ssb-backlinks": "^2.1.0",
     "ssb-blobs": "^1.2.3",
-    "ssb-config": "^3.4.4",
-    "ssb-conn": "^0.18.0",
+    "ssb-config": "^3.4.5",
+    "ssb-conn": "^0.19.1",
     "ssb-db": "^20.3.0",
     "ssb-ebt": "^5.6.7",
     "ssb-friends": "^4.2.1",
@@ -32,7 +32,7 @@
     "ssb-ooo": "^1.3.3",
     "ssb-plugins": "^1.0.2",
     "ssb-query": "^2.4.5",
-    "ssb-replicate": "^1.3.0",
+    "ssb-replicate": "^1.3.2",
     "ssb-room": "^1.2.2",
     "ssb-search": "^1.3.0",
     "ssb-tangle": "^1.0.1",
@@ -40,7 +40,8 @@
     "ssb-ws": "^6.2.3"
   },
   "devDependencies": {
-    "common-good": "^2.0.3"
+    "common-good": "^4.0.0",
+    "pull-stream": "^3.6.14"
   },
   "repository": {
     "type": "git",
